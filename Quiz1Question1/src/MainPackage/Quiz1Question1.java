@@ -10,31 +10,29 @@ public class Quiz1Question1 {
 		Scanner scnr = new Scanner(System.in);
 		
 		System.out.println("How many passes did the QB throw?");
-		int att = scnr.nextInt();
+		float att = scnr.nextFloat();
 		
 		System.out.println("How many passes did the QB complete?");
-		int comp = scnr.nextInt();
+		float comp = scnr.nextFloat();
 		
-		System.out.print("How many yards did the QB throw for?");
-		int yards = scnr.nextInt();
+		System.out.println("How many yards did the QB throw for?");
+		float yards = scnr.nextFloat();
 		
 		System.out.println("How many interceptions did the QB throw?");
-		int interceptions = scnr.nextInt();
+		float interceptions = scnr.nextFloat();
 		
 		System.out.println("How many touchdowns did the QB throw for?");
-		int td = scnr.nextInt();
+		float td = scnr.nextFloat();
 		
 		//calculate numbers that make up QBR
 		
-		double a = (comp / att - .3) * .5;
-		double b = (yards / att -3) * .25;
-		double c = (td / att)* 25;
-		double d = 2.375 - (interceptions / att *25);
+		double a = ((comp/att - 0.3) * 5);
+		double b = (yards / att - 3) * 0.25;
+		double c = (td / att) * 20;
+		double d = 2.375 - (interceptions / att * 25);
 		
 		double QBR = ((a + b + c + d) / 6) * 100;
-		
 		System.out.println(QBR);
-		
 
 	}
 
